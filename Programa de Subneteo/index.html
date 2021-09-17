@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Subneteo</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css'>
+
+</head>
+<body>
+<div ng-app='myApp' ng-controller='myCtrl'>
+	<div class="row center"> 
+		<div class="col s12 m12 l12"> 
+			<div class="card">
+				<div class="card-content">
+					<span class="card-title">Programa basico</span>
+					<div class="divider"></div><br/>
+					<input ng-model="oct0" type="number" min="0" max="255" style="width:50px"/>.
+ 					<input ng-model="oct1" type="number" min="0" max="255" style="width:50px"/>.
+ 					<input ng-model="oct2" type="number" min="0" max="255" style="width:50px"/>.
+ 					<input ng-model="oct3" type="number" min="0" max="255" style="width:50px"/>/
+ 					<input ng-model="prefix" type="number" min="0" max="32" style="width:50px"/>
+					
+					<br/>
+					Clase: {{class()}}<br/> 
+					Direccion de la red: {{networkAddress()}}<br/> 
+					Máscara de subred: {{subnetMask()}}<br/> 
+ 					IP Binario: {{IPBinary()}}<br/> 
+ 					Red en Binario: {{networkBinary}}<br/>
+					Subred en Binario: {{subnetBinary()}}<br/> 
+ 					Red en Bits: {{prefix}}<br/> 
+ 					Host Bits: {{32-prefix}}<br/> 
+ 					Subred Bits: {{subnetBits()}}<br/>
+					Total Subredes: {{totalSubnets()}}<br/>
+					Hosts por subred: {{hostsPerSubnet()}}<br/> 
+ 					Total Hosts en la red: {{hostCount}}<br/> 
+ 				</div> 
+ 			</div> 
+ 		</div> 
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
